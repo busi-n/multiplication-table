@@ -8,7 +8,7 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/displayText"
+        android:id="@+id/tabelDisplayText"
         android:layout_width="223dp"
         android:layout_height="113dp"
         android:text="MULTIPLICATION TABLES"
@@ -21,7 +21,7 @@
         app:layout_constraintVertical_bias="0.204" />
 
     <EditText
-        android:id="@+id/editTextNumber"
+        android:id="@+id/tableNumberTxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="112dp"
@@ -34,7 +34,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/displayText" />
+        app:layout_constraintTop_toBottomOf="@+id/tabelDisplayText" />
 
     <Button
         android:id="@+id/multiplyButton"
@@ -47,6 +47,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextNumber" />
+        app:layout_constraintTop_toBottomOf="@+id/tableNumberTxt" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
