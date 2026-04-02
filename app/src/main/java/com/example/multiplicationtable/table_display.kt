@@ -1,6 +1,7 @@
 package com.example.multiplicationtable
 
 import android.os.Bundle
+import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -20,7 +21,11 @@ class table_display : AppCompatActivity() {
         val tableNumber = tableString?.toInt()
 
 
-        //dis
+        //display the heaading so we can see the value in action
+        val multiplicationTable = findViewById<TextView>(R.id.tableDisplayTxt)
+        multiplicationTable.text = "$tableNumber x table"
+
+
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
