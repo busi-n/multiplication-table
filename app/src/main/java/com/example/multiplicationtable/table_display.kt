@@ -26,13 +26,19 @@ class table_display : AppCompatActivity() {
         multiplicationTable.text = "$tableNumber x table\n\n"
 
         while (counter <= 10) {
+
+            //adiidng a continue
+            if (counter == 4) {
+                counter++
+                continue
+            }
             // example : user enters 5 and count is 1 so 5 x 1 = 5 (answer)
             val answer = tableNumber * counter
             /* displays as follows:
             5 x 1 = 5
             5 x 2 = 10
             */
-            timesDisplay = "$tableNumber x $counter = $answer\n"
+            timesDisplay = "$tableNumber x $counter = $(answer)\n"
             //increasing the counter
             counter++
         }
