@@ -16,19 +16,28 @@ class table_display : AppCompatActivity() {
         //get the table number from the bundle
         val bundle: Bundle? = intent.extras
         val tableString: String? = bundle?.getString("tableNumber")
-
         //convert the table number to an integer
         val tableNumber = tableString!!.toInt()
-        val timesDisplay: String = "$tableNumber x table\n\n"
+        var timesDisplay: String = "$tableNumber x table\n\n"
         //display the heaading so we can see the value in action
         val multiplicationTable = findViewById<TextView>(R.id.tableDisplayTxt)
+        // creating counter for while loop
+        var counter = 1
         multiplicationTable.text = "$tableNumber x table\n\n"
 
+        while (counter <= 10) {
+            // example : user enters 5 and count is 1 so 5 x 1 = 5 (answer)
+            val answer = tableNumber * counter
+            /* displays as follows:
+            5 x 1 = 5
+            5 x 2 = 10
+            */
+            timesDisplay = "$tableNumber x $counter = $answer\n"
+            //increasing the counter
+            counter++
+        }
+
         //loop 10 times and keep adding to the string
-
-        //set the string onto the display
-
-
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
