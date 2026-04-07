@@ -25,7 +25,7 @@ class table_display : AppCompatActivity() {
         var counter = 1
         multiplicationTable.text = "$tableNumber x table\n\n"
 
-        while (counter <= 10) {
+        while (counter <= 20) {
 
             //adiidng a continue
             if (counter == 4) {
@@ -38,12 +38,12 @@ class table_display : AppCompatActivity() {
             5 x 1 = 5
             5 x 2 = 10
             */
-            timesDisplay = "$tableNumber x $counter = $(answer)\n"
+            timesDisplay += "$tableNumber x $counter = $answer\n"
             //increasing the counter
             counter++
         }
 
-        //loop 10 times and keep adding to the string
+        //loop 20 times and keep adding to the string
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
