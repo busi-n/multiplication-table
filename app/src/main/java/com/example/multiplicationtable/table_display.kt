@@ -42,6 +42,8 @@ class table_display : AppCompatActivity() {
             //increasing the counter
             counter++
         }
+        //displaying the table
+        multiplicationTable.text = timesDisplay
 
         //loop 20 times and keep adding to the string
 
