@@ -23,29 +23,22 @@ class table_display : AppCompatActivity() {
         val multiplicationTable = findViewById<TextView>(R.id.tableDisplayTxt)
         // creating counter for while loop
         var counter = 1
-        multiplicationTable.text = "$tableNumber x table\n\n"
+
 
         while (counter <= 20) {
-
-            //adiidng a continue
-            if (counter == 4) {
-                counter++
-                continue
-            }
             // example : user enters 5 and count is 1 so 5 x 1 = 5 (answer)
             val answer = tableNumber * counter
             /* displays as follows:
-            5 x 1 = 5
-            5 x 2 = 10
-            */
+          5 x 1 = 5
+          5 x 2 = 10
+          */
             timesDisplay += "$tableNumber x $counter = $answer\n"
             //increasing the counter
             counter++
         }
-        //displaying the table
+
         multiplicationTable.text = timesDisplay
 
-        //loop 20 times and keep adding to the string
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
